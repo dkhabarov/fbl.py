@@ -1,0 +1,21 @@
+---
+debug: False
+imap:
+  server: imap.example.com
+  port: 993
+  login: fbl@example.com
+  password: secret
+  timeout: 10
+  debug_level: 4
+  folder: FeedBack Loop
+
+database:
+  host: db.example.com
+  port: 3306
+  username: username
+  database: databasename
+  password: secret
+
+sql:
+  unsubscribe_queries:
+   - UPDATE users SET notifications=0 WHERE email='{EMAIL}'
